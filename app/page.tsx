@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Chipin } from "@/components/component/chipin";
+import { ChipIn } from "@/components/component/chip-in";
 
 export default function Home() {
   return (
     <main>
-      <Chipin />
+      <ChipIn />
     </main>
   );
 }
