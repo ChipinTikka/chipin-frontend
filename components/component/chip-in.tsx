@@ -4,27 +4,14 @@
 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 */
 
-/** Add fonts into your Next.js project:
-
-import { Inter } from 'next/font/google'
-
-inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-To read more about using these font, please visit the Next.js documentation:
-- App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-- Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
-**/
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export function ChipIn() {
   return (
@@ -149,18 +136,38 @@ export function ChipIn() {
                           <p className="text-sm font-medium">Dinner at Acme Restaurant</p>
                           <p className="text-xs text-muted-foreground">You owe INR 250 to Aman</p>
                         </div>
-                        <Button variant="outline" size="sm">
-                          Mark as Settled
-                        </Button>
+                        <div className="flex gap-2">
+                          <Button variant="outline" size="sm">
+                            Mark as Settled
+                          </Button>
+                          <Link
+                            href="upi://pay?pa=nishchay.space@okicici&pn=Nishchay&am=1&cu=INR"
+                            target="_blank"
+                          >
+                            <Button variant="outline" size="sm">
+                              Pay on Google Pay
+                            </Button>
+                          </Link>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="text-sm font-medium">Movie Tickets</p>
                           <p className="text-xs text-muted-foreground">Pranav owes you INR 150</p>
                         </div>
-                        <Button variant="outline" size="sm">
-                          Mark as Settled
-                        </Button>
+                        <div className="flex gap-2">
+                          <Button variant="outline" size="sm">
+                            Mark as Settled
+                          </Button>
+                          <Link
+                            href="upi://pay?pa=nishchay.space@okicici&pn=Nishchay&am=1&cu=INR"
+                            target="_blank"
+                          >
+                            <Button variant="outline" size="sm">
+                              Pay on Google Pay
+                            </Button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </TabsContent>
@@ -239,10 +246,10 @@ export function ChipIn() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-function BellIcon(props: React.SVGProps<SVGSVGElement>) {
+function BellIcon(props) {
   return (
     <svg
       {...props}
@@ -259,11 +266,10 @@ function BellIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
     </svg>
-  )
+  );
 }
 
-
-function WalletIcon(props: React.SVGProps<SVGSVGElement>) {
+function WalletIcon(props) {
   return (
     <svg
       {...props}
@@ -280,5 +286,5 @@ function WalletIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
       <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
     </svg>
-  )
+  );
 }
