@@ -145,7 +145,7 @@ export function ChipIn() {
                             target="_blank"
                           >
                             <Button variant="outline" size="sm">
-                              Pay on Google Pay
+                            Pay with UPI
                             </Button>
                           </Link>
                         </div>
@@ -164,7 +164,7 @@ export function ChipIn() {
                             target="_blank"
                           >
                             <Button variant="outline" size="sm">
-                              Pay on Google Pay
+                              Pay with UPI
                             </Button>
                           </Link>
                         </div>
