@@ -229,7 +229,7 @@ export function ChipIn() {
       </main>
       <footer className="border-t bg-background px-4 py-3 shadow-sm sm:px-6">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <p className="text-sm text-muted-foreground">&copy; 2023 Chip In. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; 2024 Chip In. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Privacy Policy
