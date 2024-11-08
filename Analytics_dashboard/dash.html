@@ -1,0 +1,59 @@
+
+<html lang="en">
+<head>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style (2).css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChipIn - Analysis Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="analysis-dashboard">
+    <h2>Spending Analysis</h2>
+
+    <div class="chart-container">
+      <h3>Category Spending Breakdown</h3>
+      <canvas id="categoryChart"></canvas>
+    </div>
+
+    <div class="budget-section">
+      <h3>Set Budgets for Each Category</h3>
+      <div class="budget-row">
+        <label>Dining: </label>
+        <input type="number" id="diningBudget" placeholder="Enter budget">
+        <span id="diningSpend">Spent: ₹1300</span>
+      </div>
+      <div class="budget-row">
+        <label>Groceries: </label>
+        <input type="number" id="groceriesBudget" placeholder="Enter budget">
+        <span id="groceriesSpend">Spent: ₹1150</span>
+      </div>
+      <div class="budget-row">
+        <label>Entertainment: </label>
+        <input type="number" id="entertainmentBudget" placeholder="Enter budget">
+        <span id="entertainmentSpend">Spent: ₹500</span>
+      </div>
+      <div class="budget-row">
+        <label>Utilities: </label>
+        <input type="number" id="utilitiesBudget" placeholder="Enter budget">
+        <span id="utilitiesSpend">Spent: ₹750</span>
+      </div>
+      <div class="budget-row">
+        <label>Others: </label>
+        <input type="number" id="othersBudget" placeholder="Enter budget">
+        <span id="othersSpend">Spent: ₹300</span>
+      </div>
+
+      <div class="total-spending">
+        <strong>Current Month's Spending: ₹4000</strong>
+      </div>
+      <button onclick="setBudgets()">Set Budgets</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
